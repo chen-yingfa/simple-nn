@@ -1,6 +1,6 @@
 # Simple NN
 
-An extremely simple neural network made for educational purposes.
+An extremely simple neural network written purely using Python and NumPy, and with detailed comments, docstring and type-hinting, made for educational purposes.
 
 Some design choices were adapted from PyTorch, because in the end we would be using PyTorch, so understanding the implementation of it would be good.
 
@@ -10,7 +10,9 @@ Some design choices were adapted from PyTorch, because in the end we would be us
 The following commands should be executed under `src` folder.
 
 Generate data: `python gen_data.py`
+
 Visualize data: `python visualize.py`
+
 Train: `python train.py`
 
 
