@@ -11,9 +11,25 @@ The following commands should be executed under `src` folder.
 
 Generate data: `python gen_data.py`
 
-Visualize data: `python visualize.py`
+Visualize training data: `python visualize.py`
 
 Train: `python train.py`
+
+> By default, after training and testing, the code will automatically visualize the model by plotting the outputting vectors of the test set.
+
+## Hyperparameters
+
+The implementation is supposed to be as simple as possible while maintaining the main features of a PyTorch program, thus, there are basically only two training hyperparameters: epoch and learning rate. They are found in the beginning of the `train` function in `train.py`.
+
+
+## Visualization
+
+For educational purposes, I have included a visualizer that visualizes features on a 2D plot. The following images are, respectively, training examples and the output of the trained model on the test set.
+
+![train_examples](readme.assets/train_examples.png)
+
+
+![transformed](readme.assets/transformed.png)
 
 
 ## Developer's Note

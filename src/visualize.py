@@ -32,11 +32,13 @@ def scatter_examples(examples: list, xlim: tuple=None, ylim: tuple=None,
         plt.ylim(*ylim)
     if add_line:
         plt.plot([-1, 1], [-1, 1], 'r--')
+    plt.xlabel('first element')
+    plt.ylabel('second element')
     plt.show()
 
 
 if __name__ == '__main__':
     # For debugging
     from data_loader import load_examples
-    examples = load_examples('../data/dev.txt')
+    examples = load_examples('../data/train.txt')
     scatter_examples(examples)

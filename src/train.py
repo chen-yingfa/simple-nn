@@ -46,6 +46,8 @@ def evaluate(model: Model, examples: list, criterion: Loss) -> dict:
 
 def train(model, train_examples, dev_examples):
     '''Train a model, and save the best one'''
+
+    # Hyperparameters
     epochs = 10
     learn_rate = 1  # Greatest learning rate during training
 
