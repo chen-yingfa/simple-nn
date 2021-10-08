@@ -17,9 +17,18 @@ Train: `python train.py`
 
 > By default, after training and testing, the code will automatically visualize the model by plotting the outputting vectors of the test set.
 
-## Hyperparameters
+## Model
 
-The implementation is supposed to be as simple as possible while maintaining the main features of a PyTorch program, thus, there are basically only two training hyperparameters: epoch and learning rate. They are found in the beginning of the `train` function in `train.py`.
+The definition of the model itself is the class `SimpleNN` in `model.py`. Both input and output are 2D vectors, where the i'th component of the outputting vector is the predicted probability that the sample belonds to the i'th class. 
+
+The model consists of 2 hidden layers, both with length of 4, as illustrated below.
+
+![model](readme.assets/model.png)
+
+
+### Hyperparameters
+
+The implementation is supposed to be as simple as possible while maintaining the main features of a PyTorch program, thus, there are basically only two training hyperparameters: **epoch** and **learning rate**. They are found in the beginning of the `train` function in `train.py`.
 
 
 ## Visualization
