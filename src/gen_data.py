@@ -10,9 +10,9 @@ from visualize import scatter_examples
 def target_fn(x: list) -> int:
     '''The function to model'''
     x = np.array(x)
-    # if x[0] < 0:
-    #     return 1
-    # return 0
+    if x[0] < 0:
+        return 1
+    return 0
 
     # The following is equivalent to XOR function
     if x[0] < 0 and x[1] < 0:

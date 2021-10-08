@@ -109,15 +109,18 @@ class Linear(Component):
     
     def backward(self, grad_next: np.ndarray) -> np.ndarray:
         self.grad_b = grad_next
-        self.grad_W = np.array([xi * grad_next for xi in self.x])
+        self.x = np.reshape(self.x, (-1, 1))
+        grad_next = grad_next.reshape((1, -1))
+
+        self.grad_W = self.x @ grad_next
         # grad_x is passed to previous layers
         grad_x = grad_next @ self.grad_W.transpose(-1, -2)
         return grad_x
 
     def update_weights(self, lr: float) -> None:
         '''`lr`: float, learning rate'''
-        self.W -= lr * self.grad_W
-        self.b -= lr * self.grad_b
+        self.W -= lr * self.grad_W.squeeze()
+        self.b -= lr * self.grad_b.squeeze()
 
 
 if __name__ == '__main__':
